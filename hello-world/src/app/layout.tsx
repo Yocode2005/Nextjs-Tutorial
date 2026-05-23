@@ -1,5 +1,12 @@
-export const metadata = {
-  title: 'Hello World',
+import { Metadata } from "next"
+
+
+export const metadata: Metadata = {
+  title: {
+    default : "Next.js App",
+    template : "%s | Next.js codebase",
+    absolute : "",
+  },
   description: 'A simple Next.js application',
 }
 
