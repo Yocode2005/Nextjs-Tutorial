@@ -1,6 +1,8 @@
+import Link from "next/link"
 export default function ProductList(){
     return (
         <>
+        <Link href="/">Go to Home</Link>
         <h1>Product list</h1>
         <h2>Product 1</h2>
         <h2>Product 2</h2>
