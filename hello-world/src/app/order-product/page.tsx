@@ -5,7 +5,7 @@ import {useRouter} from 'next/navigation'; // only works in client components
 export default function OrderProduct(){
     const router = useRouter();
     const handleClick = () => {
-        console.log("Order placed successfully!");
+        alert("Order placed successfully!");
         router.push('/'); //  Redirect to home page after placing the order
     }
     return(
