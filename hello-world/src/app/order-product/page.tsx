@@ -1,5 +1,5 @@
 "use client"; // This directive indicates that this component should be rendered on the client side
-import {useRouter} from 'next/navigation'; // only works in client components
+import {useRouter} from 'next/navigation'; // only works in client components and it is used to programmatically navigate between pages in a Next.js application
 
 
 export default function OrderProduct(){
