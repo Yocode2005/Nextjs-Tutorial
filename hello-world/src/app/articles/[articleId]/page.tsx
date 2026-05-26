@@ -5,11 +5,11 @@ export default function NewsArticle(){
             <h1>News article id</h1>
             <p>Reading in language</p>
             <div>
-                <Link href="/articles/id?lang=en">Read in English</Link>
+                <Link href="/articles/id?lang=en">English</Link>
                 <br />
-                <Link href="/articles/id?lang=es">Read in Spanish</Link>
+                <Link href="/articles/id?lang=es">Spanish</Link>
                 <br />
-                <Link href="/articles/id?lang=fr">Read in French</Link>
+                <Link href="/articles/id?lang=fr">French</Link>
             </div>
         </div>
     )
