@@ -1,4 +1,5 @@
-import {useRouter} from 'next/navigation';
+"use client"; // This directive indicates that this component should be rendered on the client side
+import {useRouter} from 'next/navigation'; // only works in client components
 
 
 export default function OrderProduct(){
