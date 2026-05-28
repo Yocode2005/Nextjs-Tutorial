@@ -4,9 +4,9 @@ import {redirect} from 'next/navigation'; // This function is used to programmat
 
 import { parse } from 'path';
 
-function getRandomInt(count : number){
-    return Math.floor(Math.random()  * count);
-}
+// function getRandomInt(count : number){
+//     return Math.floor(Math.random()  * count);
+// }
 
 export default async function ProductReview({
     params,
@@ -14,10 +14,10 @@ export default async function ProductReview({
     params : Promise<{ productid : string;  reviewId : string }>;
 }){
 
-    const random = getRandomInt(2);
-    if(random == 1){
-        throw new Error("Error loading review"); // Simulate a random error to demonstrate error handling in Next.js. This will cause the page to display an error message when the random number is 1.
-    }
+    // const random = getRandomInt(2);
+    // if(random == 1){
+    //     throw new Error("Error loading review"); // Simulate a random error to demonstrate error handling in Next.js. This will cause the page to display an error message when the random number is 1.
+    // }
 
     const { productid, reviewId } = await params;
     if(parseInt(reviewId) > 1000){
