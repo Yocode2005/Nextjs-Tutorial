@@ -5,13 +5,14 @@ import {startTransition} from "react"; // in simple terms, startTransition is a 
 
 export default function ErrorBoundary({ error, reset,}: { error: Error; reset: () => void }) {
     const router = useRouter();
-
-     startTransition(() => {
+    const reload = () => {
+        startTransition(() => {
         router.refresh(); // Refresh the current page to attempt to recover from the error. This will re-render the page and may resolve the issue that caused the error.
         reset(); // Call the reset function to reset the error state. This allows the user to try loading the page again after an error has occurred.
     });
+    }
     return <div>
         <p>{error.message} </p>
-        <button onClick={() => reset()}>Try again</button>
+        <button onClick={() => reload()}>Try again</button>
     </div>
 }
