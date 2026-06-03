@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation"; // used to access the current URL path in a client component, allowing us to extract parameters like productId and reviewId from the URL to display relevant information about the not found review.
 export default function NotFound(){
     const pathname = usePathname();
     const productId = pathname.split("/")[2]; // Extract productId from the URL and 2
