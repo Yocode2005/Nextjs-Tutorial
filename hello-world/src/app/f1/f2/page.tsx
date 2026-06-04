@@ -5,7 +5,7 @@ export default function F2 (){
         <>
         <h1> F2 Page </h1>
         <div>
-            <Link href="/f1">Go  back to F1</Link>
+            <Link href={"/f4"}>Go to F4</Link>
         </div>
         </>
     )
