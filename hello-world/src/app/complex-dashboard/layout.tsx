@@ -1,8 +1,12 @@
+import Login from "../(auth)/login/page";
+import LoginSlot from "./@login/page";
+
 export default function ComplexDashboardLayout({
   children,
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
@@ -10,7 +14,8 @@ export default function ComplexDashboardLayout({
   notifications: React.ReactNode;
   login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = true; // means the user is  logged in, and if not loggedIn so we will show the login slot instead of the dashboard
+  return isLoggedIn ? (
     <>
       <div>
         <div>{children}</div>
@@ -23,5 +28,7 @@ export default function ComplexDashboardLayout({
         </div>
       </div>
     </>
+  ) : (
+    login
   );
 }
