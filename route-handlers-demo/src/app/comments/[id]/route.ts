@@ -19,3 +19,16 @@ export async function PATCH(
 
     return Response.json(comments[index]);
 }
+
+export async function DELETE(_request: Request, {params}: {params: Promise<{id: string}>}) {
+    // todolist for delete comment
+    // 1. Get the id from params
+    // 2. Find the index of the comment to delete
+    // 3. Remove the comment from the array
+    // 4. Return the deleted comment as response
+    const {id} = await params;
+    const index = comments.findIndex((comment) => comment.id === parseInt(id));
+    const  deletedComment = comments[index];
+    comments.splice(index, 1);
+    return Response.json(deletedComment);
+}
