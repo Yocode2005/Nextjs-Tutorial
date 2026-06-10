@@ -7,6 +7,12 @@ export async function GET(_request: Request, {params}: {params: Promise<{id: str
 }
 
 export async function PATCH(
+    // todolist for update comment
+    // 1. Get the id from params
+    // 2. Get the text from request body
+    // 3. Find the comment to update
+    // 4. Update the comment's text
+    // 5. Return the updated comment as response
     request : Request,
     {params}: {params: Promise<{id: string}>}
 ) {
