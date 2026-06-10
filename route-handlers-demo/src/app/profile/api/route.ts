@@ -8,7 +8,7 @@ export async function GET(request: NextRequest){
     const headerList = await headers();
     console.log(headerList.get("Authorization"));
 
-    const theme = request.cookies.get("theme");
+    const theme = request.cookies.get("theme"); // use the cookies property of the request object to access cookies
     console.log(theme);
 
     return new Response("<h1>Profile API data</h1>",{
