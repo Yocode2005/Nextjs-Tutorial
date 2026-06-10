@@ -7,5 +7,14 @@ export async function GET(request: NextRequest){
 
     const headerList = await headers();
     console.log(headerList.get("Authorization"));
-    return new Response("Profile API data");
+
+    const theme = request.cookies.get("theme");
+    console.log(theme);
+
+    return new Response("<h1>Profile API data</h1>",{
+        headers: {
+            "Content-Type": "text/html",
+            "set-cookie": "theme=dark", // Set a cookie in the response
+        },
+    });
 }
